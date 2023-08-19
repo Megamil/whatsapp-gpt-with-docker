@@ -27,3 +27,5 @@ $ node index.js
 ## Testar
 * Quando executar irá pedir para ler o QRCode no terminal, abra seu WhatsApp e faça a leitura normalmente.
 * Envie uma mensagem de outro aparelho para você, com o prefixo /AIGPT [Seu Prompt].
+
+Conteúdo explicado passo a passo no curso: https://www.udemy.com/course/inteligencia-artificial-engenharia-de-prompt/
