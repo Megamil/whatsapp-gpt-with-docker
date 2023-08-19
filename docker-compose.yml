@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./tokens:/app/tokens
+    environment:
+      - OPENAI_TOKEN=SEU_TOKEN_AQUI (https://platform.openai.com/account/api-keys)
+
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
